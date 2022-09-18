@@ -11,7 +11,7 @@
 //  полей формы методом reset.
 
 const form = document.querySelector('.login-form');
-const input = document.querySelectorAll('input');
+
 form.addEventListener('submit', event => {
   event.preventDefault();
 
@@ -21,17 +21,25 @@ form.addEventListener('submit', event => {
     email: email.value,
     password: password.value,
   };
-  input.forEach(element => {
-    if (element.value === '') {
-      alert('Все поля должны быть заполнены.');
-    }
-  });
-  //   const keys = Object.keys(dataOutput);
-  //   for (const key of keys) {
-  //     if (dataOutput[key] === '') {
-  //       alert('Все поля должны быть заполнены.');
-  //     }
-  //   }
+
+  if (email.value === '' || password.value === '') {
+    alert('Все поля должны быть заполнены.');
+    return;
+  }
+
   console.log(dataOutput);
   event.currentTarget.reset();
 });
+
+// input.forEach(element => {
+//   if (element.value === '') {
+//     alert('Все поля должны быть заполнены.');
+//   }
+// });
+
+//   const keys = Object.keys(dataOutput);
+//   for (const key of keys) {
+//     if (dataOutput[key] === '') {
+//       alert('Все поля должны быть заполнены.');
+//     }
+//   }

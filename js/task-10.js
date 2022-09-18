@@ -35,7 +35,7 @@ function countOfBoxes() {
 
 function createBoxes(amount) {
   sizeOfBox = 30;
-  boxes.innerHTML = '';
+
   for (let i = 0; i < amount; i += 1) {
     boxes.insertAdjacentHTML(
       'beforeend',

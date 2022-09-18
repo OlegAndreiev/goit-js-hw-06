@@ -11,7 +11,7 @@ const spanValue = document.querySelector('.color');
 console.dir(document.body);
 button.addEventListener('click', () => {
   body.style.backgroundColor = getRandomHexColor();
-  spanValue.textContent = `HEX:${getRandomHexColor()} RGB:${body.style.backgroundColor}`;
+  spanValue.textContent = `HEX:${getRandomHexColor()}`;
 });
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
